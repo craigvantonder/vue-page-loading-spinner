@@ -8,9 +8,9 @@
   <meta name="description" content="A fullscreen page loader example for Vue js.">
   <meta name="author" content="Craig van Tonder">
 
-  <!-- http://stackoverflow.com/a/18490463/2110294 -->
   <style>
-    .loaderImage {
+    /* http://stackoverflow.com/a/18490463/2110294 */
+    .fullscreenLoader {
       max-width: 100%;
       max-height: 100%;
       bottom: 0;
@@ -21,6 +21,14 @@
       right: 0;
       top: 0;
     }
+    /* http://stackoverflow.com/a/27614179/2110294 */
+    .fullscreenDiv {
+      position: fixed; /* or absolute */
+      top: 50%;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+    }
   </style>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -28,13 +36,17 @@
 </head>
 
 <body>
+
+  <page></page>
   <!-- PAGE -->
   <div id="myPage">
     <!-- LOADER -->
-    <img src="loading.gif" class="loaderImage" v-if="loading" />
+    <img src="loading.gif" class="fullscreenLoader" v-if="loading" />
     <!-- CONTENT -->
-    <h1 v-show="!loading" style="display: none;">{{ title }}</h1>
-    <p v-show="!loading" style="display: none;">{{ content }}</p>
+    <div v-show="!loading" class="fullscreenDiv" style="display: none;">
+      <h1>{{ title }}</h1>
+      <p>{{ content }}</p>
+    </div>
   </div>
   <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
@@ -52,7 +64,7 @@
           this.loading = false;
         }
       });
-    },1000);
+    },1500);
 
   </script>
 </body>
