@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Fullscreen Loader</title>
-  <meta name="description" content="A fullscreen page loader example for Vue js.">
+  <title>Page Loading Spinner</title>
+  <meta name="description" content="An example for how we might implement a page loading spinner with Vue js.">
   <meta name="author" content="Craig van Tonder">
 
   <style>
@@ -57,15 +57,14 @@
         el: '#myPage',
         data: {
           loading: true,
-          title: 'Fullscreen Loader',
-          content: 'A fullscreen page loader example for Vue js.'
+          title: 'Page Loading Spinner',
+          content: 'An example for how we might implement a page loading spinner with Vue js.'
         },
         created: function() {
           this.loading = false;
         }
       });
     },1500);
-
   </script>
 </body>
 </html>
