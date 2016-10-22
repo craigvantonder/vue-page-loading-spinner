@@ -60,7 +60,8 @@
         el: '#myPage',
         data: {
           loading: true,
-          title: 'Page Loading Spinner'
+          // Current meta title
+          title: document.getElementsByTagName("title")[0].innerHTML
         },
         created: function() {
           this.loading = false;
