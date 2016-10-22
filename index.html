@@ -28,6 +28,8 @@
       left: 50%;
       /* bring your own prefixes */
       transform: translate(-50%, -50%);
+      /* not required for centering div */
+      text-align: center;
     }
   </style>
   <!--[if lt IE 9]>
@@ -45,7 +47,8 @@
     <!-- CONTENT -->
     <div v-show="!loading" class="fullscreenDiv" style="display: none;">
       <h1>{{ title }}</h1>
-      <p>{{ content }}</p>
+      <p>An example for how we might implement a page loading spinner with Vue js.</p>
+      <p>View the code at the <a href="https://github.com/craigvantonder/vue-page-loading-spinner">GitHub repository</a>.</p>
     </div>
   </div>
   <!-- SCRIPTS -->
@@ -57,8 +60,7 @@
         el: '#myPage',
         data: {
           loading: true,
-          title: 'Page Loading Spinner',
-          content: 'An example for how we might implement a page loading spinner with Vue js.'
+          title: 'Page Loading Spinner'
         },
         created: function() {
           this.loading = false;
