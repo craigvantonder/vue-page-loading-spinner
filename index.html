@@ -43,7 +43,7 @@
   <!-- PAGE -->
   <div id="myPage">
     <!-- LOADER -->
-    <img src="loading.gif" class="fullscreenLoader" v-if="loading" />
+    <img src="loading.gif" class="fullscreenLoader" v-show="loading" />
     <!-- CONTENT -->
     <div v-show="!loading" class="fullscreenDiv" style="display: none;">
       <h1>{{ title }}</h1>
