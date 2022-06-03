@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2018 Craig van Tonder, https://craigvantonder.co.za
+Copyright (c) 2018 Craig van Tonder, https://craigvantonder.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
